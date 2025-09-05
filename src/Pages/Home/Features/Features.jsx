@@ -1,73 +1,47 @@
 import { motion } from "framer-motion";
-import { FaRocket, FaCode, FaMobileAlt, FaClock, FaBolt, FaSmile } from "react-icons/fa";
-
-const features = [
-    {
-        icon: <FaRocket className="text-3xl text-primary" />,
-        title: "Fast & Optimized",
-        description: "Your site will be blazing fast and SEO-friendly out of the box.",
-    },
-    {
-        icon: <FaCode className="text-3xl text-primary" />,
-        title: "Clean Code",
-        description: "I write maintainable, readable, and modular code using modern standards.",
-    },
-    {
-        icon: <FaMobileAlt className="text-3xl text-primary" />,
-        title: "Fully Responsive",
-        description: "Your website will look great on any screen size or device.",
-    },
-    {
-        icon: <FaClock className="text-3xl text-primary" />,
-        title: "On-Time Delivery",
-        description: "I value deadlines and deliver quality work when promised.",
-    },
-    {
-        icon: <FaBolt className="text-3xl text-primary" />,
-        title: "Modern Stack",
-        description: "React, Vite, Tailwind, Framer Motion — everything you expect in 2025.",
-    },
-    {
-        icon: <FaSmile className="text-3xl text-primary" />,
-        title: "Client-Centered",
-        description: "Clear communication and feedback loops from start to finish.",
-    },
-];
+import { features } from "../../../../public/data";
 
 const Features = () => {
     return (
-        <section className="bg-light py-10 px-6">
-            <div className="text-center">
+        <section className="py-16 px-6">
+            {/* Header */}
+            <div className="max-w-4xl mx-auto text-center mb-16">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="text-3xl md:text-4xl font-bold text-primary mb-4"
+                    className="text-4xl md:text-5xl font-bold text-primary mb-4"
                 >
                     Why Choose Me?
                 </motion.h2>
-                <p className="text-secondary mb-12 max-w-2xl mx-auto">
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2, duration: 0.6 }}
+                    className="text-secondary text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
+                >
                     I combine creative design, solid engineering, and smooth user experience to bring your ideas to life.
-                </p>
+                </motion.p>
+            </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {features.map((feature, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1, duration: 0.5 }}
-                            className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow flex flex-col items-center"
-                        >
-                            <div className="mb-4">{feature.icon}</div>
-                            <h3 className="text-xl font-semibold text-primary mb-2">{feature.title}</h3>
-                            <p className="text-secondary text-sm">{feature.description}</p>
-                        </motion.div>
-                    ))}
-                </div>
+            {/* Feature Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_1.618fr] lg:grid-cols-3 gap-6 md:gap-[calc(1rem*1.618)] max-w-6xl mx-auto">
+                {features.map((feature, index) => (
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.15, duration: 0.5 }}
+                        className={`bg-white p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow flex flex-col items-center text-center`}
+                    >
+                        <div className="mb-4">{feature.icon}</div>
+                        <h3 className="text-xl md:text-2xl font-semibold text-primary mb-2">{feature.title}</h3>
+                        <p className="text-secondary text-sm md:text-base leading-relaxed">{feature.description}</p>
+                    </motion.div>
+                ))}
             </div>
         </section>
     );
-}
+};
 
 export default Features;

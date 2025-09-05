@@ -5,7 +5,7 @@ import Projects from "../Projects/Projects";
 
 const Home = () => {
     return (
-        <main>
+        <main className="max-w-7xl mx-auto ">
             <Hero />
             <Features />
             <Process />
