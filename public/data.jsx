@@ -107,7 +107,7 @@ export const blogs = [
     summary: "A behind-the-scenes breakdown of how I developed LuxeMatches — from authentication to Stripe payments.",
     tags: ["MERN", "Authentication", "Stripe"],
     image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop",
-    color: "from-purple-500 to-indigo-600",
+    color: "bg-gradient-to-r from-[#3A4D39] to-[#12372A]",
     link: "#",
   },
   {
@@ -117,7 +117,7 @@ export const blogs = [
     summary: "Modular, reusable, and scalable React code — tips I use to keep my frontend clean and efficient.",
     tags: ["React", "Clean Code", "Best Practices"],
     image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=250&fit=crop",
-    color: "from-blue-500 to-cyan-600",
+    color: "bg-gradient-to-r from-[#3A4D39] to-[#12372A]",
     link: "#",
   },
   {
@@ -127,7 +127,23 @@ export const blogs = [
     summary: "Exploring how utility-first design sped up development time while improving consistency.",
     tags: ["CSS", "Tailwind", "Productivity"],
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop",
-    color: "from-emerald-500 to-teal-600",
+    color: "bg-gradient-to-r from-[#3A4D39] to-[#12372A]",
     link: "#",
   },
 ];
+
+
+export const skillMessages = {
+  'React': 'I use React to build dynamic and interactive user interfaces.',
+  'JavaScript': 'JavaScript is my core programming language for web development.',
+  'TailwindCSS': 'I leverage TailwindCSS for rapid, utility-first styling.',
+  'HTML5': 'HTML5 forms the foundation of all my web projects.',
+  'CSS3': 'I use modern CSS3 features for animations and layouts.',
+  'Node.js': 'Node.js powers my backend development and server-side logic.',
+  'MongoDB': 'MongoDB is my preferred NoSQL database for data storage.',
+  'Express.js': 'Express.js helps me build robust REST APIs quickly.',
+  'Squarespace': 'I specialize in creating custom Squarespace websites for clients.',
+  'Responsive Design': 'I ensure all websites work perfectly across all devices.',
+  'Git': 'Git is essential for my version control and collaboration workflow.',
+  'Figma': 'I use Figma for UI/UX design and prototyping before development.'
+};

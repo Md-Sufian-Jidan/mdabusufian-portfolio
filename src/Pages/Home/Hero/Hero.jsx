@@ -4,8 +4,7 @@ import Typewriter from "typewriter-effect";
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center px-10">
-            {/* Content */}
+        <section className="relative flex items-center p-10">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}

@@ -197,7 +197,7 @@ const Blog = () => {
                                     {post.tags.map((tag, i) => (
                                         <span
                                             key={i}
-                                            className={`px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r ${post.color} text-white`}
+                                            className={`px-3 py-1 text-xs font-medium rounded-full ${post.color} text-white`}
                                         >
                                             {tag}
                                         </span>

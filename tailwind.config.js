@@ -14,7 +14,7 @@ export default {
         dark: "#0A0A0A",
       },
       fontFamily: {
-        sans: ["Poppins", "sans-serif"],
+        sans: ["'Playfair Display'", "'Merriweather'", "sans-serif"],
       },
     },
   },

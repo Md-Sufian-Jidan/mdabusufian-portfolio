@@ -3,7 +3,7 @@ import { steps } from "../../../../public/data";
 
 const Process = () => {
     return (
-        <section className="py-16 px-6">
+        <section className="p-10">
             <div className="max-w-5xl mx-auto text-center mb-16">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}

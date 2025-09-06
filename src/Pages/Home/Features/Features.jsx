@@ -3,7 +3,7 @@ import { features } from "../../../../public/data";
 
 const Features = () => {
     return (
-        <section className="py-16 px-6">
+        <section className="p-10">
             {/* Header */}
             <div className="max-w-4xl mx-auto text-center mb-16">
                 <motion.h2

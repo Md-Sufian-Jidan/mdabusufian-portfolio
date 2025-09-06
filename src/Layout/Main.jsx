@@ -4,7 +4,7 @@ import Footer from '../Components/Footer/Footer';
 
 const Main = () => {
     return (
-        <div className='bg-gradient-to-b from-light/20 to-accent/10'>
+        <div className='bg-gradient-to-b from-light/20 to-accent/10 px-10'>
             <Navbar />
             <div className='min-h-[calc(100vh-160px)] overflow-x-hidden pt-14 scroll-smooth'>
                 <Outlet />
