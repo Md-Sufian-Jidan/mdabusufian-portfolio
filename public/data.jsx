@@ -1,4 +1,4 @@
-import { FaHome, FaUserAlt, FaBlog, FaEnvelope, FaFileAlt, FaRocket, FaCode, FaMobileAlt, FaClock, FaBolt, FaSmile, FaSearch, FaPencilRuler, } from "react-icons/fa";
+import { FaHome, FaUserAlt, FaBlog, FaEnvelope, FaFileAlt, FaRocket, FaCode, FaMobileAlt, FaClock, FaBolt, FaSmile, FaSearch, FaPencilRuler, FaLinkedin, FaGithub, FaWhatsapp, } from "react-icons/fa";
 
 export const navItems = [
   { name: "Home", path: "/", icon: <FaHome /> },
@@ -18,10 +18,58 @@ export const features = [
 ];
 
 export const steps = [
-  { icon: <FaSearch className="text-white text-2xl" />, title: "Research", description: "Understand your goals, audience, and brand needs." },
-  { icon: <FaPencilRuler className="text-white text-2xl" />, title: "Design", description: "Create a modern, user-focused layout and wireframe." },
-  { icon: <FaCode className="text-white text-2xl" />, title: "Develop", description: "Build the site with responsive, clean React code." },
-  { icon: <FaRocket className="text-white text-2xl" />, title: "Launch", description: "Deploy, test, and deliver with performance in mind." },
+  {
+    icon: <FaSearch className="text-light text-2xl" />,
+    title: "Research & Discovery",
+    description: "Understand your goals, audience, and brand needs through comprehensive analysis.",
+    details: [
+      "Market analysis and competitor research",
+      "User persona development",
+      "Technical requirements gathering",
+      "Project scope definition"
+    ],
+    duration: "1-2 weeks",
+    color: "from-primary to-secondary"
+  },
+  {
+    icon: <FaPencilRuler className="text-light text-2xl" />,
+    title: "Design & Planning",
+    description: "Create a modern, user-focused layout and wireframe with detailed planning.",
+    details: [
+      "Wireframing and prototyping",
+      "UI/UX design creation",
+      "Design system development",
+      "Client feedback integration"
+    ],
+    duration: "2-3 weeks",
+    color: "from-primary to-secondary"
+  },
+  {
+    icon: <FaCode className="text-light text-2xl" />,
+    title: "Development",
+    description: "Build the site with responsive, clean code following best practices.",
+    details: [
+      "Frontend development with React",
+      "Backend API integration",
+      "Database design and implementation",
+      "Testing and optimization"
+    ],
+    duration: "3-4 weeks",
+    color: "from-primary to-secondary"
+  },
+  {
+    icon: <FaRocket className="text-light text-2xl" />,
+    title: "Launch & Deploy",
+    description: "Deploy, test, and deliver with performance and security in mind.",
+    details: [
+      "Performance optimization",
+      "Security implementation",
+      "Deployment and hosting setup",
+      "Post-launch support and monitoring"
+    ],
+    duration: "1 week",
+    color: "from-primary to-secondary"
+  },
 ];
 
 export const projects = [
@@ -29,6 +77,7 @@ export const projects = [
     title: "LuxeMatches",
     description:
       "Premium matchmaking platform with role-based auth, Stripe payments, dynamic filtering, and admin control.",
+    image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=600&h=400&fit=crop&crop=center",
     features: [
       "Role-based Access & Authentication: Firebase Auth + JWT protection.",
       "Stripe Payment Integration for secure contact requests.",
@@ -41,11 +90,14 @@ export const projects = [
     ],
     live: "https://luxe-matches-client.vercel.app/",
     client: "https://github.com/Md-Sufian-Jidan/luxe-matches-client",
+    server: "https://github.com/Md-Sufian-Jidan/luxe-matches-server",
+    category: "Full-Stack"
   },
   {
     title: "WorkNest",
     description:
       "Job management app with employee salary tracking, dashboards, and JWT-secured role-based access.",
+    image: "https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=600&h=400&fit=crop&crop=center",
     features: [
       "Role-based dashboards: Admin, HR, Employee.",
       "Stripe integration for salary payments.",
@@ -58,11 +110,14 @@ export const projects = [
     ],
     live: "https://work-nest-client.web.app/",
     client: "https://github.com/Md-Sufian-Jidan/work-nest-client",
+    server: "https://github.com/Md-Sufian-Jidan/work-nest-server",
+    category: "Full-Stack"
   },
   {
     title: "StudySync",
     description:
       "Online assessment system with role-based feedback, leaderboards, PDF previews, and dark mode.",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop&crop=center",
     features: [
       "Admins can give marks & feedback. Users can submit assignments.",
       "PDF preview & notes on submission.",
@@ -75,6 +130,8 @@ export const projects = [
     ],
     live: "https://online-assessment-client.web.app/",
     client: "https://github.com/Md-Sufian-Jidan/online-assessment-client",
+    server: "https://github.com/Md-Sufian-Jidan/online-assessment-server",
+    category: "Full-Stack"
   },
 ];
 
@@ -132,7 +189,6 @@ export const blogs = [
   },
 ];
 
-
 export const skillMessages = {
   'React': 'I use React to build dynamic and interactive user interfaces.',
   'JavaScript': 'JavaScript is my core programming language for web development.',
@@ -147,3 +203,30 @@ export const skillMessages = {
   'Git': 'Git is essential for my version control and collaboration workflow.',
   'Figma': 'I use Figma for UI/UX design and prototyping before development.'
 };
+
+export const socialLinks = [
+  {
+    name: 'WhatsApp',
+    icon: FaWhatsapp,
+    href: 'https://wa.me/8801906844598',
+    color: 'hover:text-green-400',
+  },
+  {
+    name: 'Email',
+    icon: FaEnvelope,
+    href: 'mailto:jidanjiyaj03@gmail.com',
+    color: 'hover:text-green-400',
+  },
+  {
+    name: 'LinkedIn',
+    icon: FaLinkedin,
+    href: 'https://www.linkedin.com/in/md-abu-sufian-jidan/',
+    color: 'hover:text-green-400',
+  },
+  {
+    name: 'GitHub',
+    icon: FaGithub,
+    href: 'https://github.com/Md-Sufian-Jidan',
+    color: 'hover:text-green-400',
+  }
+];

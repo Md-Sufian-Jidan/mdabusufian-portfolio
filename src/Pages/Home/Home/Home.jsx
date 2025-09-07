@@ -1,4 +1,3 @@
-import ContactMeeting from "../ContactMeeting/ContactMeeting";
 import Features from "../Features/Features";
 import Hero from "../Hero/Hero";
 import Process from "../Process/Process";
@@ -11,7 +10,6 @@ const Home = () => {
             <Features />
             <Process />
             <Projects />
-            <ContactMeeting />
         </main>
     );
 };

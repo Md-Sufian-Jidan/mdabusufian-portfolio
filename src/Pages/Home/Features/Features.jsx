@@ -3,9 +3,9 @@ import { features } from "../../../../public/data";
 
 const Features = () => {
     return (
-        <section className="p-10">
+        <section className="py-12 px-5 md:px-10 lg:px-20">
             {/* Header */}
-            <div className="max-w-4xl mx-auto text-center mb-16">
+            <div className="max-w-4xl mx-auto text-center md:mb-10 mb-5">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ const Features = () => {
             </div>
 
             {/* Feature Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-[1fr_1.618fr] lg:grid-cols-3 gap-6 md:gap-[calc(1rem*1.618)] max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_1.618fr] lg:grid-cols-3 gap-6 md:gap-10">
                 {features.map((feature, index) => (
                     <motion.div
                         key={index}

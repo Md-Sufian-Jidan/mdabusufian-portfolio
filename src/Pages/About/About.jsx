@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { skills } from '../../../public/data';
 
 const About = () => {
-    // Typewriter effect state
     const [typewriterText, setTypewriterText] = useState('');
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
@@ -15,7 +14,6 @@ const About = () => {
         "Tech Learner for Life"
     ];
 
-    // Typewriter effect logic
     useEffect(() => {
         const currentString = typewriterStrings[currentIndex];
         const timeout = setTimeout(() => {
@@ -37,7 +35,7 @@ const About = () => {
     }, [typewriterText, currentIndex, isDeleting, typewriterStrings]);
 
     return (
-        <div className="min-h-screen" style={{ backgroundColor: '#F2F1EB' }}>
+        <div>
             <section className="max-w-7xl mx-auto py-16 px-6">
                 {/* Main Flex Layout */}
                 <div className="flex flex-col md:flex-row items-center md:gap-16 mb-20">

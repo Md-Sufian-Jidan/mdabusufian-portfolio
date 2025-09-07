@@ -4,12 +4,12 @@ import Typewriter from "typewriter-effect";
 
 const Hero = () => {
     return (
-        <section className="relative flex items-center p-10">
+        <section className="relative flex items-center py-12 px-5 md:px-10 lg:px-20">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="relative z-10 flex flex-col md:flex-row items-center w-full gap-10"
+                className="relative z-10 flex flex-col-reverse md:flex-row items-center w-full gap-10"
             >
                 {/* Left side: Name + Typewriter + Summary */}
                 <div className="flex-1 text-center md:text-left">
@@ -25,7 +25,7 @@ const Hero = () => {
                     <p className="text-secondary text-lg md:text-xl mb-8">
                         Passionate web developer crafting beautiful and functional digital experiences. Specializing in modern web technologies and responsive design.
                     </p>
-                    <div className="flex flex-wrap gap-4">
+                    <div className="flex gap-4">
                         <a
                             href="#projects"
                             className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-accent rounded-xl font-semibold hover:scale-105 transition-transform shadow-lg"

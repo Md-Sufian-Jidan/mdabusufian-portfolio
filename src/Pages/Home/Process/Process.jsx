@@ -1,51 +1,58 @@
-import { motion } from "framer-motion";
-import { steps } from "../../../../public/data";
+import { motion } from 'framer-motion';
+import { steps } from '../../../../public/data';
+import ProcessStep from './ProcessStep';
 
 const Process = () => {
+
     return (
-        <section className="p-10">
-            <div className="max-w-5xl mx-auto text-center mb-16">
-                <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
+        <section className="py-12 px-5 md:px-10 lg:px-20 relative overflow-hidden">
+            <div className="relative z-10">
+                {/* Header */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="text-4xl md:text-5xl font-bold text-primary mb-4"
+                    transition={{ duration: 0.8 }}
+                    className="text-center mb-20"
                 >
-                    My Work Process
-                </motion.h2>
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2, duration: 0.6 }}
-                    className="text-secondary text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
-                >
-                    A smooth step-by-step journey from ideas to a launched, high-performing product.
-                </motion.p>
-            </div>
-
-            <div className="relative flex flex-col md:flex-row items-center md:justify-between gap-12">
-                {steps.map((step, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.2, duration: 0.6 }}
-                        className="relative flex-1 flex flex-col items-center text-center"
+                    <motion.span
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.2 }}
+                        className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4"
                     >
-                        {/* Circle Icon */}
-                        <div className="bg-primary rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-lg">
-                            {step.icon}
-                        </div>
-                        {/* Title & Description */}
-                        <h3 className="text-xl md:text-2xl font-semibold text-primary mb-2">{step.title}</h3>
-                        <p className="text-secondary text-sm md:text-base leading-relaxed">{step.description}</p>
+                        Work Process
+                    </motion.span>
 
-                        {/* Connector line (desktop only) */}
-                        {index < steps.length - 1 && (
-                            <div className="hidden md:block absolute top-8 right-[-50%] w-[100%] h-1 bg-gradient-to-r from-primary to-secondary opacity-40 rounded-full"></div>
-                        )}
-                    </motion.div>
-                ))}
+                    <h2 className="text-4xl lg:text-6xl font-bold text-primary mb-6">
+                        How I
+                        <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                            {" "}Work
+                        </span>
+                    </h2>
+
+                    <p className="text-secondary text-lg lg:text-xl max-w-4xl mx-auto leading-relaxed">
+                        A smooth, collaborative step-by-step journey from initial ideas to a launched,
+                        high-performing product that exceeds your expectations.
+                    </p>
+                </motion.div>
+
+                {/* Process Steps */}
+                <div className="max-w-7xl mx-auto">
+                    {steps.map((step, index) => (
+                        <ProcessStep
+                            key={index}
+                            step={step}
+                            index={index}
+                        />
+                    ))}
+                </div>
+
+                {/* Mobile Step Indicators */}
+                <div className="flex justify-center space-x-4 mt-12 md:hidden">
+                    {steps.map((_, index) => (
+                        <button key={index} />
+                    ))}
+                </div>
             </div>
         </section>
     );
