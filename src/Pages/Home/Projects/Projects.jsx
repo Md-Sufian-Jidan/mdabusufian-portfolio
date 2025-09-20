@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { projects } from '../../../../public/data';
 import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
@@ -88,7 +87,7 @@ const Projects = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="text-center mt-16"
+                    className="text-center my-10"
                 >
                     <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-center">
                         <h3 className="text-2xl lg:text-3xl font-bold text-light mb-4">
@@ -98,7 +97,7 @@ const Projects = () => {
                             Let's collaborate and bring your ideas to life with cutting-edge technology
                             and exceptional user experience.
                         </p>
-                        <Link href={'/contact'}>
+                        <motion.a href='/contact'>
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
@@ -106,7 +105,7 @@ const Projects = () => {
                             >
                                 Get In Touch
                             </motion.button>
-                        </Link>
+                        </motion.a>
                     </div>
                 </motion.div>
             </div>

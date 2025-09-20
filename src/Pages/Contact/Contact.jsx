@@ -1,7 +1,8 @@
 import { useForm, ValidationError } from "@formspree/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaEnvelope, FaLinkedin, FaGithub, FaWhatsapp, FaUser, FaPaperPlane, FaMapMarkerAlt, FaPhone, FaCheckCircle, FaHeart } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaWhatsapp, FaUser, FaPaperPlane, FaMapMarkerAlt, FaCheckCircle, FaHeart } from "react-icons/fa";
 import { useState } from "react";
+import { socialLinks } from "../../../public/data";
 
 const Contact = () => {
     const [state, handleSubmit] = useForm("xwpbrkge");
@@ -179,7 +180,7 @@ const Contact = () => {
                                 className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
                             >
                                 <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                                         <FaEnvelope className="text-white text-lg" />
                                     </div>
                                     <div>
@@ -194,7 +195,7 @@ const Contact = () => {
                                 className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
                             >
                                 <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                                         <FaWhatsapp className="text-white text-lg" />
                                     </div>
                                     <div>
@@ -209,7 +210,7 @@ const Contact = () => {
                                 className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
                             >
                                 <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                                         <FaMapMarkerAlt className="text-white text-lg" />
                                     </div>
                                     <div>
@@ -224,12 +225,7 @@ const Contact = () => {
                         <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
                             <h3 className="font-semibold text-primary mb-4 text-center">Connect on Social</h3>
                             <div className="flex justify-center gap-4">
-                                {[
-                                    { icon: FaLinkedin, href: "https://www.linkedin.com/in/md-abu-sufian-jidan/", color: "from-blue-600 to-blue-700" },
-                                    { icon: FaGithub, href: "https://github.com/Md-Sufian-Jidan", color: "from-gray-700 to-gray-800" },
-                                    { icon: FaWhatsapp, href: "https://wa.me/8801906844598", color: "from-green-500 to-green-600" },
-                                    { icon: FaEnvelope, href: "mailto:jidanjiyaj03@gmail.com", color: "from-red-500 to-red-600" }
-                                ].map((social, index) => (
+                                {socialLinks.map((social, index) => (
                                     <motion.a
                                         key={index}
                                         href={social.href}

@@ -148,6 +148,7 @@ export const skills = [
   "Mongoose",
   "Firebase",
   "JWT",
+  "SquareSpace",
   "Stripe",
   "Git / GitHub",
   "Postman",
@@ -164,7 +165,7 @@ export const blogs = [
     summary: "A behind-the-scenes breakdown of how I developed LuxeMatches — from authentication to Stripe payments.",
     tags: ["MERN", "Authentication", "Stripe"],
     image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop",
-    color: "bg-gradient-to-r from-[#3A4D39] to-[#12372A]",
+    color: "bg-gradient-to-r from-secondary to-primary",
     link: "#",
   },
   {
@@ -174,7 +175,7 @@ export const blogs = [
     summary: "Modular, reusable, and scalable React code — tips I use to keep my frontend clean and efficient.",
     tags: ["React", "Clean Code", "Best Practices"],
     image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=250&fit=crop",
-    color: "bg-gradient-to-r from-[#3A4D39] to-[#12372A]",
+    color: "bg-gradient-to-b from-secondary to-primary",
     link: "#",
   },
   {
@@ -184,7 +185,7 @@ export const blogs = [
     summary: "Exploring how utility-first design sped up development time while improving consistency.",
     tags: ["CSS", "Tailwind", "Productivity"],
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop",
-    color: "bg-gradient-to-r from-[#3A4D39] to-[#12372A]",
+    color: "bg-gradient-to-br from-secondary to-primary",
     link: "#",
   },
 ];
@@ -209,24 +210,28 @@ export const socialLinks = [
     name: 'WhatsApp',
     icon: FaWhatsapp,
     href: 'https://wa.me/8801906844598',
-    color: 'hover:text-green-400',
+    hover: 'hover:text-dark',
+    color: "from-primary to-secondary"
   },
   {
     name: 'Email',
     icon: FaEnvelope,
     href: 'mailto:jidanjiyaj03@gmail.com',
-    color: 'hover:text-green-400',
+    hover: 'hover:text-dark',
+    color: "from-primary to-secondary"
   },
   {
     name: 'LinkedIn',
     icon: FaLinkedin,
     href: 'https://www.linkedin.com/in/md-abu-sufian-jidan/',
-    color: 'hover:text-green-400',
+    hover: 'hover:text-dark',
+    color: "from-primary to-secondary"
   },
   {
     name: 'GitHub',
     icon: FaGithub,
     href: 'https://github.com/Md-Sufian-Jidan',
-    color: 'hover:text-green-400',
+    hover: 'hover:text-dark',
+    color: "from-primary to-secondary"
   }
 ];

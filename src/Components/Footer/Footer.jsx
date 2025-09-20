@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import {  FaArrowUp, FaHeart, FaCode, } from 'react-icons/fa';
-import { navItems } from '../../../public/data';
+import { FaArrowUp, FaHeart, FaCode, } from 'react-icons/fa';
+import { navItems, socialLinks } from '../../../public/data';
 
 // Floating Shape Component
 const FloatingShape = ({ delay = 0, duration = 20, className = "" }) => (
@@ -142,7 +142,7 @@ const Footer = () => {
               </h4>
 
               {/* Social Links */}
-              <div className="flex items-center justify-center space-x-4 p-3 rounded-xl bg-light/5 backdrop-blur-sm border border-accent/10 hover:border-accent/30 transition-all duration-300">
+              <div className="flex items-center justify-center space-x-4 p-3 rounded-xl bg-primary/50  backdrop-blur-sm border border-accent/10 hover:border-accent/30 transition-all duration-300">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.name}
@@ -157,7 +157,7 @@ const Footer = () => {
                     <motion.div
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.5 }}
-                      className={`text-xl ${social.color} transition-colors`}
+                      className={`text-xl ${social.hover} transition-colors`}
                     >
                       <social.icon />
                     </motion.div>

@@ -121,7 +121,7 @@ const Blog = () => {
                     whileInView="visible"
                     className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
                 >
-                    {blogs.map((post, index) => (
+                    {blogs.map((blog, index) => (
                         <motion.article
                             key={index}
                             variants={cardVariants}
@@ -134,8 +134,8 @@ const Blog = () => {
                             {/* Image Container */}
                             <div className="relative overflow-hidden h-48">
                                 <motion.img
-                                    src={post.image}
-                                    alt={post.title}
+                                    src={blog.image}
+                                    alt={blog.title}
                                     variants={imageVariants}
                                     whileHover="hover"
                                     className="w-full h-full object-cover"
@@ -150,7 +150,7 @@ const Blog = () => {
                                     className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-primary flex items-center gap-1"
                                 >
                                     <FaClock className="text-xs" />
-                                    {post.readTime}
+                                    {blog.readTime}
                                 </motion.div>
                             </div>
 
@@ -164,7 +164,7 @@ const Blog = () => {
                                     className="flex items-center gap-2 text-secondary text-sm mb-3"
                                 >
                                     <FaCalendarAlt className="text-xs" />
-                                    {post.date}
+                                    {blog.date}
                                 </motion.div>
 
                                 {/* Title */}
@@ -174,7 +174,7 @@ const Blog = () => {
                                     transition={{ delay: index * 0.1 + 0.4 }}
                                     className="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors duration-300 line-clamp-2"
                                 >
-                                    {post.title}
+                                    {blog.title}
                                 </motion.h3>
 
                                 {/* Summary */}
@@ -184,7 +184,7 @@ const Blog = () => {
                                     transition={{ delay: index * 0.1 + 0.5 }}
                                     className="text-secondary text-sm leading-relaxed mb-4 line-clamp-3"
                                 >
-                                    {post.summary}
+                                    {blog.summary}
                                 </motion.p>
 
                                 {/* Tags */}
@@ -194,10 +194,10 @@ const Blog = () => {
                                     transition={{ delay: index * 0.1 + 0.6 }}
                                     className="flex flex-wrap gap-2 mb-6"
                                 >
-                                    {post.tags.map((tag, i) => (
+                                    {blog.tags.map((tag, i) => (
                                         <span
                                             key={i}
-                                            className={`px-3 py-1 text-xs font-medium rounded-full ${post.color} text-white`}
+                                            className={`px-3 py-1 text-xs font-medium rounded-full ${blog.color ? blog.color : 'bg-gradient-to-r from-primary to-secondary'} text-white`}
                                         >
                                             {tag}
                                         </span>
@@ -206,7 +206,7 @@ const Blog = () => {
 
                                 {/* Read More Button */}
                                 <motion.a
-                                    href={post.link}
+                                    href={blog.link}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: index * 0.1 + 0.7 }}
@@ -242,13 +242,14 @@ const Blog = () => {
                     <p className="text-secondary mb-6 text-lg">
                         Want to stay updated with my latest articles and insights?
                     </p>
-                    <motion.button
+                    <motion.a
                         whileHover={{
                             scale: 1.05,
                             boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
                         }}
                         whileTap={{ scale: 0.95 }}
                         className="inline-flex items-center gap-3 bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl transition-all duration-300 group"
+                        href="/contact"
                     >
                         <FaBookOpen className="text-sm group-hover:scale-110 transition-transform" />
                         Subscribe to Newsletter
@@ -258,7 +259,7 @@ const Blog = () => {
                         >
                             →
                         </motion.span>
-                    </motion.button>
+                    </motion.a>
                 </motion.div>
             </div>
         </section>

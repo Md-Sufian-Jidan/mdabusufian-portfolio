@@ -33,7 +33,8 @@ const Hero = () => {
                             View Projects <FaArrowRight className="mt-0.5" />
                         </a>
                         <a
-                            href="/resume.pdf"
+                            href="/MDABUSUFIANJIDAN_RESUME.pdf"
+                            target="_blank"
                             className="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary rounded-xl font-semibold hover:bg-primary hover:text-accent transition-colors shadow-lg"
                         >
                             Download Resume

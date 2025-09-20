@@ -38,7 +38,7 @@ const Resume = () => {
                     className="text-center mb-16"
                 >
                     <motion.a
-                        href="/resume.pdf"
+                        href="/MDABUSUFIANJIDAN_RESUME.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
